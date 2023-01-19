@@ -10,8 +10,7 @@ daha sonrasında bilgileri çekmek için bir tablo ve tablo içine hangi tuşa v
     mouse_x INT NULL,
     mouse_y INT NULL,
     event_type VARCHAR(10) NULL,   
-	click VARCHAR(255) NULL,
-	active_window_click VARCHAR(255) NOT NULL DEFAULT ''    
+	click VARCHAR(255) NULL	 
 )"
 
 
